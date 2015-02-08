@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="myCardHelper3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pta-IW-Hoy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="_buttonReset"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="601" width="40" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="37T-gc-quV"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="erw-6h-q0r">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="602" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="_stepperDeckCount:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hC7-Ek-XpX"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deck(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEb-r7-Dg6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="182" y="563" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-fd-6Tp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="149" y="563" width="25" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OW-bh-eh7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="_buttonHelp"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="313" y="601" width="32" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="R1F-ib-wmm" kind="show" id="42r-lW-Laq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pta-IW-Hoy"/>
+                                <exclude reference="erw-6h-q0r"/>
+                                <exclude reference="nEb-r7-Dg6"/>
+                                <exclude reference="yvb-fd-6Tp"/>
+                                <exclude reference="3OW-bh-eh7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pta-IW-Hoy"/>
+                                <include reference="erw-6h-q0r"/>
+                                <include reference="nEb-r7-Dg6"/>
+                                <include reference="yvb-fd-6Tp"/>
+                                <include reference="3OW-bh-eh7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="_stepperDeckCountOutlet" destination="erw-6h-q0r" id="j0I-Oe-FUG"/>
+                        <outlet property="labelDeckNumber" destination="yvb-fd-6Tp" id="GEx-TL-Pg4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.5" y="322.5"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="CrO-Ju-Ori">
+            <objects>
+                <viewController id="R1F-ib-wmm" customClass="TestViewController" customModule="myCardHelper3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pZ7-yi-tna"/>
+                        <viewControllerLayoutGuide type="bottom" id="V4m-p9-KbE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w3s-1j-18C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82v-bE-7rU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="_buttonClose"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="298" y="20" width="40" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="_buttonClose:" destination="R1F-ib-wmm" eventType="touchUpInside" id="YqW-oA-Xrx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wD-gp-pBD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">##User Manual
+The purpose of this app is to display the probabilities of the next card being drawn. The app begins in a state where no cards are drawn using only 1 standard 52-card deck. Thus, the percentage for drawing any card to begin with are all the same, 7.69%.
+
+First, set the number of decks that you or the dealer are using in your game. Use the **+** button to add more decks (up to 10). Use the **-** button if you overshot.
+
+When a dealer draws a card, tap the number of that card on the app. Immediately, the app updates the probabilties of all the cards for the next draw. The higher the percentage for a card, the higher the chances (probability) that card may be drawn. Naturally, when the percentage for a card reaches 0.0%, there are no more of those cards in the deck(s).
+
+Use the reset button to start over.
+
+Feel free to leave the app and come back, the app will save its state.
+
+NOTE: The alternating colors that are statically displayed in the app are unrelated to the draws or probabilities associated with that card type.
+
+NOTE2: Don't worry, no matter how many decks are being used, the starting probabilities will always stay at 7.69% because they are still proportional to the original, they are simply multiplied by the number of decks being used. You will only begin to see a drastic difference immediately after the first card is drawn.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlH-W0-T6t">
+                                <rect key="frame" x="16" y="70" width="321" height="481"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">"User Manual: \n The purpose of this app is to display the probabilities of the next card being drawn. The app begins in a state where no cards are drawn using only 1 standard 52-card deck. Thus, the percentage for drawing any card to begin with are all the same, 7.69%. \n First, set the number of decks that you or the dealer are using in your game. Use the **+** button to add more decks (up to 10). Use the **-** button if you overshot. \n When a dealer draws a card, tap the number of that card on the app. Immediately, the app updates the probabilties of all the cards for the next draw. The higher the percentage for a card, the higher the chances (probability) that card may be drawn. Naturally, when the percentage for a card reaches 0.0%, there are no more of those cards in the deck(s). \n Use the reset button to start over. \n Feel free to leave the app and come back, the app will save its state. \n NOTE: The alternating colors that are statically displayed in the app are unrelated to the draws or probabilities associated with that card type. \n NOTE2: Don't worry, no matter how many decks are being used, the starting probabilities will always stay at 7.69% because they are still proportional to the original, they are simply multiplied by the number of decks being used. You will only begin to see a drastic difference immediately after the first card is drawn."</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="82v-bE-7rU"/>
+                                <exclude reference="9wD-gp-pBD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="82v-bE-7rU"/>
+                                <include reference="9wD-gp-pBD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="_textHelp" destination="RlH-W0-T6t" id="vlm-6L-kIA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcN-Vv-rls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="322"/>
+        </scene>
+    </scenes>
+</document>
