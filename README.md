@@ -1,5 +1,5 @@
 # CardCounter
-##User Manual
+## User Manual
 The purpose of this app is to display the probabilities of the next card being drawn. The app begins in a state where no cards are drawn using only 1 standard 52-card deck. Thus, the percentage for drawing any card to begin with are all the same, 7.69%.
 
 First, set the number of decks that you or the dealer are using in your game. Use the **+** button to add more decks (up to 10). Use the **-** button if you overshot.
